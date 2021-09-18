@@ -41,7 +41,8 @@
     border: 1px solid #fff;  
     display: flex;
     justify-content: flex-end;
-  }
+    margin-left: 710px;
+}
 
 .main-page{
     margin-left: 20px;
@@ -59,12 +60,11 @@
     height: 300px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.logo{
-    display:flex;
-    align-self:center;
-    }
-.header-bottom-link{
+
+.project-link
+.my-github{
     display:flex;
     align-self:flex-end;
     margin-bottom:20px;
