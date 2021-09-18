@@ -67,6 +67,7 @@
 .header-bottom-link{
     display:flex;
     align-self:flex-end;
+    margin-bottom:20px;
 }
 
 .photo-grid-container {
@@ -74,6 +75,26 @@
     justify-content: center;
   }
   
+.photo-grid {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction:row;
+    align-items: center;
+  }
+
+.first-item {
+    order: 1;
+  }
+  
+.last-item {
+    order: -1;
+  }
+
+
+
+
 
 
 
