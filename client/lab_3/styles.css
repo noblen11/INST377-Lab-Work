@@ -16,7 +16,7 @@
 }  
 
 .menu-container{
-    color: #fff;
+    color: white;
     background-color:royalblue;
     padding: 20px 0;
     display: flex;
@@ -24,8 +24,8 @@
 }
 
 .menu {
-    border: 1px solid #fff;
-    width: 1000px;
+    border: 1px solid white;
+    width: 900px;
     display: flex;
     justify-content: space-around;
   }
@@ -40,7 +40,7 @@
     border: 1px solid #fff;  
     display: flex;
     justify-content: flex-end;
-    margin-left: 710px;
+    margin-left: 610px;
 }
 
 .main-page{
