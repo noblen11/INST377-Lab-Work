@@ -5,7 +5,15 @@
   }
 
 
-.title-container{
+a:active{
+  color:white
+}
+
+a:hover{
+  color:purple
+}
+
+  .title-container{
     background-color: rgba(0,139, 139,0.8);
     padding: 15px 0; 
 }
@@ -42,6 +50,8 @@
     justify-content: flex-end;
     margin-left: 610px;
 }
+
+ 
 
 .main-page{
     margin-left: 20px;
