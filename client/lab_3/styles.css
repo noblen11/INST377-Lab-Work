@@ -5,14 +5,7 @@
   }
 
 
-a:active{
-  color:white
-}
-
-a:hover{
-  color:purple
-}
-
+ 
   .title-container{
     background-color: rgba(0,139, 139,0.8);
     padding: 15px 0; 
@@ -31,6 +24,12 @@ a:hover{
     justify-content: center;
 }
 
+.menu-container a {
+  color:white;
+
+}
+
+
 .menu {
     border: 1px solid white;
     width: 900px;
@@ -45,6 +44,7 @@ a:hover{
 }
 
 .links {
+    color: white;
     border: 1px solid #fff;  
     display: flex;
     justify-content: flex-end;
@@ -109,7 +109,7 @@ a:hover{
   
 .footer-item {
     border: 1px solid #fff;
-    background-color: #D6E9FE;
+    background-color:lightskyblue;
     height: 200px;
     flex: 1;
 }
