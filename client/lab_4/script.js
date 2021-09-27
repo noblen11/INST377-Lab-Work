@@ -1,48 +1,42 @@
-let slidesPosition= 0;
-const slides = document.getElementsByClassName('carousel__item');
+let slidesPosition = 0;
+const slides = document.getElementsByClassName("carousel_item");
 const totalSlides = slides.length;
 
-document.
-    getElementsById('carousel__button--next')
-    .addEventListener("click", function(){
-        moveToNextSlide();
-    });
+const next = document.querySelector(".next");
+next.addEventListener("click", () => {
+  moveToNextSlide();
+  console.log("nextButton.click");
+});
 
-document.
-    getElementsById('carousel__button--prev')
-    .addEventListener("click", function(){
-        moveToPrevSlide();
-    });  
-    
-function updateSlidePosition(){
-    for (let slide of slides){
-        slide.classList.remove('carousel__item--visable');
-        slide.classList.remove('carousel__item--hidden');
-    }
+const prev = document.querySelector(".prev");
+prev.addEventListener("click", () => {
+  moveToPrevSlide();
+  console.log("prevButton.click");
+});
 
-    slides[slidePosition].classList.add('carousel__item--visable')
+function updateSlidePosition() {
+  for (let slide of slides) {
+    slide.classList.remove("carousel_item--visable");
+    slide.classList.remove("carousel_item--hidden");
+  }
+
+  slides[slidePosition].classList.add("carousel_item--visable");
 }
 
-
-function moveToNextSlide(){
-    if (slidePosition == totalSlides - 1){
-        slidePosition = 0;
-    }   else {
-        slidePosition++;
-    }
-    updateSlidePosition();
-
+function moveToNextSlide() {
+  if (slidePosition == totalSlides - 1) {
+    slidePosition = 0;
+  } else {
+    slidePosition++;
+  }
+  updateSlidePosition();
 }
 
-function moveToPrevSlide(){
-    if (slidePosition == 0){
-        slidePosition = totalSlides - 1;
-    }   else {
-        slidePosition--;
-    }
-    updateSlidePosition();
-
+function moveToPrevSlide() {
+  if (slidePosition == 0) {
+    slidePosition = totalSlides - 1;
+  } else {
+    slidePosition--;
+  }
+  updateSlidePosition();
 }
-     
-    
-
