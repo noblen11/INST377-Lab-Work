@@ -12,12 +12,14 @@ document.addEventListener('DOMContentLoded', () =>{
     let upTimerId 
     let downTimerId
     let isJumping = true
+    let isGoingLeft = false
+    let isGoingRight = false
     
     
     function crateDoodler(){
         grid.appendChild(doodler)
         doodler.classList.add('doodler')
-        doodlerLeftSpace = platfoerms[0].left
+        doodlerLeftSpace = platforms[0].left
         doodler.style.left = doodlerLeftSpace + 'px'
         doodler.style.bottom = doodlerBottomSpace + 'px'  
     
@@ -123,6 +125,18 @@ document.addEventListener('DOMContentLoded', () =>{
         clearInterval(downTimerId)
     }
     
+    function moveLeft(){
+        isGoingleft = true
+        leftTimerID = setInterval(function () {
+            if (doodlerLeftSpace >= 0){
+                doodlerLeftSpace -=5
+                doodler.style.left = doodlerLeftSpace + 'px'
+            } else moveRight()
+        }, 30)
+    }
+    
+    
+    
     
     function start(){
          if(!isGameOver){
@@ -130,6 +144,7 @@ document.addEventListener('DOMContentLoded', () =>{
             createDoodler()
             setInterval(movePlatforms,30)
             jump()
+            document.addEventListener('keyup',control)
         }
     }
 
