@@ -1,4 +1,4 @@
-const e = require("express");
+/*const e = require("express");*/
 
 document.addEventListener("DOMContentLoded", () => {
   const grid = document.QuerySelector(".grid");
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoded", () => {
 
       platforms.forEach(platform => {
         if (
-          (doodlerBottomSpace >= platform.bottom &&)
+          (doodlerBottomSpace >= platform.bottom )&&
           (doodlerBottomSpace <= platform.bottom + 15) &&
           ((doodlerLeftSpace + 60 >= platform.left) &&
           (doodlerLeftSpace <= platform.left + 85)) &&
