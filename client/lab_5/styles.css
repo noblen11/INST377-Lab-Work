@@ -1,14 +1,27 @@
-.title{
+body{
+    background-color:darkslategray;
+}
+
+.Title{
     background-color: orange;
-    padding: 50px;
-    width: 100%;
+    color:black;
+    padding: 25px;
+    width: 80%;
+    margin-left:40px;
     display:flex;
-    justify-content: flex-start
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    border:none;
+    border-radius:5px;
 }
 
 .forms{
     background-color:white;
-    margin-left: 100px
+    margin-top: 100px;
+    width: 20%;
+    padding: 100px;
+    margin-left: 15%;
+    border-radius:5px;
 }
 
 .form-row{
@@ -19,14 +32,23 @@
     
 }
 
+.form-row label{
+    font-weight: bold;
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+
 .form-row input[type='text'] {
     background-color: #FFFFFF;
     border: 1px solid black;
     border-radius: 5px;
     width: 100%;
-    padding: 4px;
-    font-size: 14px;
+    padding: 8px;
+    font-size: 25px;
+    margin-bottom:20px;
 }
+     
 
 .form-row input[type='text']:invalid{
     border: 1px solid #D55C5F;
@@ -42,16 +64,56 @@
   
    
 .legacy-form-row .radio-label {
-    font-size: 14px;
+    font-size: 25px;
     display:block;
+    margin-top:18px;
 }
   
-  .legacy-form-row input[type='radio'] {
-    margin-top: 2px;
-  }
-    
-  /*.legacy-form-row .radio-label,*/
-  .legacy-form-row input[type='radio'] {
-    float: left;
+.legacy-form-row legend{
+    font-weight: bold;
+    font-size: 25px;
 }
+
+.legacy-form-row input[type='radio'] {
+    margin-top: 26px;
+}
+    
+   .legacy-form-row .radio-label,
+   .legacy-form-row input[type='radio'] {
+    float: left;
+   }
+
+.form-row-button button{
+    font-size: 20px;
+    font-weight: bold;
+      
+    color: #FFFFFF;
+    background-color: green;
+      
+    border: none;
+    border-radius: 5px;
+      
+    padding: 20px 40px;
+    
+}
+
+.statement{
+    background-color: white;
+    border-radius:5px;
+    display:flex;
+    justify-content: flex-start;
+    margin-left:50%;
+    margin-right:10%;
+    padding:20px;
+    margin-bottom: 20px
+}
+
+
+.statement p{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:large;
+    margin-left:20px;
+
+}
+
 
