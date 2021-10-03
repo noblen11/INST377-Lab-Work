@@ -8,14 +8,33 @@
 </head>
 <body style= "background-color:darkslategray;">
     <div class ='Title'> Prof A's Lab 5</div>
-    <form action='' method='get' class='speaker-form'>
-        <div class ='form-row'>
-            <label for='full name'>First Name</label>
+    <div class = 'forms'>
+        <form action='' method='get' class='speaker-form'>
+            <div class ='form-row'>
+                <label for='full-name'>First Name</label>
+                <input id='full-name' name='full-name' type='text'/>
+            <div class='form-row'>  
+                <label for='Food-Preference'>Food Preference</label>
+                <input id='Food-Preference' name='Food-preference' type='text'/>
+            </div>    
+            <fieldset class='legacy-form-row'>
+                <legend>veggie or vegan?</legend>
+                <input id='option-1'
+                    name='option'
+                    type='radio'
+                    value='yes' />
+                <label for='option-1' class='radio-label'>yes</label>
+                <input id='option-2'
+                    name='option'
+                    type='radio'
+                    value='no'
+                    checked />
+                <label for='option-2' class='radio-label'>no</label>
+            </fieldset>
             
-        </div>
             
-    </form>
-  
+        </form>
+    </div>
   
   
   
