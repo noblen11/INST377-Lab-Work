@@ -2,11 +2,11 @@ body{
     background-color:darkslategray;
 }
 
-.all{
+/*.all{
     display: flex;
     align-items: center;
     
-}
+}*/
 
 .Title{
     background-color: orange;
@@ -111,9 +111,9 @@ body{
     display:flex;
     justify-content: flex-start;
     margin-left: 170%;
-    width:190%;
+    width:800px;
     padding:20px;
-     
+    
 }
 
 
