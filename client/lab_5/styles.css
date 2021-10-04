@@ -29,6 +29,7 @@ body{
     padding: 100px;
     margin-left:10%;
     border-radius:5px;
+    height:400px
 }
 
 .form-row{
@@ -112,7 +113,6 @@ body{
     margin-left: 170%;
     width:190%;
     padding:20px;
-    
      
 }
 
