@@ -1,6 +1,4 @@
-const e = require('express');
-
-document.addEventListener('DOMContentLoded', () => {
+ document.addEventListener('DOMContentLoded', () => {
   const grid = document.QuerySelector('.grid');
   const doodler = document.createElement("div");
   let doodlerLeftspace = 50;
@@ -14,20 +12,20 @@ document.addEventListener('DOMContentLoded', () => {
   let isJumping = true;
   let isGoingLeft = false;
   let isGoingRight = false;
-},
-  function crateDoodler() {
+
+  function createDoodler() {
     grid.appendChild(doodler);
     doodler.classList.add("doodler");
     doodlerLeftSpace = platforms[0].left;
     doodler.style.left = doodlerLeftSpace + "px";
     doodler.style.bottom = doodlerBottomSpace + "px";
-  },
+  }
 
-  class platform {
+  class Platform {
     constructor(newPlatBottom) {
       this.bottom = newPlatBottom;
-      this.left = math.random() * 315;
-      this.visual = document.createElement("div");
+      this.left = Math.random() * 315;
+      this.visual = document.createElement('div');
 
       const visual = this.visual;
       visual.classList.add("platform");
@@ -35,17 +33,17 @@ document.addEventListener('DOMContentLoded', () => {
       visual.style.bottom = this.bottom + "px";
       grid.appendChild(visual);
     }
-  },
+  }
 
   function createPlatforms() {
     for (let i = 0; i < platformCount; i++) {
       let platGap = 600 / platformCount;
-      let newPlatBpttom = 100 + i * platGap;
-      let newPlatform = new platform(newPlatBottom);
+      let newPlatBottom = 100 + i * platGap;
+      let newPlatform = new Platform(newPlatBottom);
       platforms.push(newPlatform);
       console.log(platforms);
     }
-  },
+  }
 
   function movePlatforms() {
     if (doodlerBottomSpace > 200) {
@@ -65,7 +63,7 @@ document.addEventListener('DOMContentLoded', () => {
         }
       });
     }
-  },
+  }
 
   function control(e) {
     if (e.key === "ArrowLeft") {
@@ -75,7 +73,7 @@ document.addEventListener('DOMContentLoded', () => {
     } else if (e.key === "ArrowUp") {
       moveStraight();
     }
-  },
+  }
 
   function jump() {
     clearInterval(downTimerId);
@@ -87,7 +85,7 @@ document.addEventListener('DOMContentLoded', () => {
         fall();
       }
     }, 30);
-  },
+  }
 
   function fall() {
     clearInterval(upTimerId);
@@ -113,7 +111,7 @@ document.addEventListener('DOMContentLoded', () => {
         }
       });
     }, 30);
-  },
+  }
 
   function gameOver() {
     console.log("game over");
@@ -125,7 +123,7 @@ document.addEventListener('DOMContentLoded', () => {
     clearInterval(downTimerId);
     clearInterval(leftTimerId);
     clearInterval(rightTimerId);
-  },
+  }
 
   function moveLeft() {
     if (isGoingRight) {
@@ -139,7 +137,7 @@ document.addEventListener('DOMContentLoded', () => {
         doodler.style.left = doodlerLeftSpace + "px";
       } else moveRight();
     }, 20);
-  },
+  }
 
   function moveRight() {
     if (isGoingLeft) {
@@ -153,24 +151,25 @@ document.addEventListener('DOMContentLoded', () => {
         doodler.style.left = doodlerLeftSpace = "px";
       } else moveLeft();
     }, 20);
-  },
+  }
 
   function moveStraight() {
     isGoingRight = false;
     isGoingLeft = false;
     clearInterval(rightTimerId);
     clearInterval(leftTimerId);
-  },
+  }
 
   function start() {
     if (!isGameOver) {
+      console.log('test')
       createPlatforms();
       createDoodler();
       setInterval(movePlatforms, 30);
-      jump();
+      jump(startPoint);
       document.addEventListener("keyup", control);
     }
-  },
+  }
 
   start()
-} )
+  })
